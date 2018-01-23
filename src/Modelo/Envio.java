@@ -5,28 +5,40 @@
  */
 package Modelo;
 
+import java.sql.Timestamp;
+
 /**
  *
  * @author fragata
  */
-public class Destinos {
+public class Envio {
     private int numenvio;
+    private Timestamp horaFechaEnvio;
     private String lugarEnvio;
     private String lugarDestino;
     private String Tiempopromedio;
     private String importancia;
 
-    public Destinos() {
+    public Envio() {
     }
 
-    public Destinos(int numenvio, String lugarEnvio, String lugarDestino, String Tiempopromedio, String importancia) {
+    public Envio(int numenvio, Timestamp horaFechaEnvio, String lugarEnvio, String lugarDestino, String Tiempopromedio, String importancia) {
         this.numenvio = numenvio;
+        this.horaFechaEnvio = horaFechaEnvio;
         this.lugarEnvio = lugarEnvio;
         this.lugarDestino = lugarDestino;
         this.Tiempopromedio = Tiempopromedio;
         this.importancia = importancia;
     }
 
+    public Timestamp getHoraFechaEnvio() {
+        return horaFechaEnvio;
+    }
+
+    public void setHoraFechaEnvio(Timestamp horaFechaEnvio) {
+        this.horaFechaEnvio = horaFechaEnvio;
+    }
+    
     public String getImportancia() {
         return importancia;
     }
@@ -66,7 +78,5 @@ public class Destinos {
     public void setTiempopromedio(String Tiempopromedio) {
         this.Tiempopromedio = Tiempopromedio;
     }
-    
-    
     
 }
