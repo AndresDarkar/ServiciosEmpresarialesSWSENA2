@@ -3,21 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package Modelo.DAO;
 
 /**
  *
  * @author fragata
  */
-public class RepLegal {
-    private Persona represenate;
-
-    public RepLegal() {
-    }
-
-    public RepLegal(Persona represenate) {
-        this.represenate = represenate;
-    }
-    
+public interface EnvioDAOInterface {
     
 }

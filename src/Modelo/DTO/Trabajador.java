@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package Modelo.DTO;
 
 /**
  *
  * @author fragata
  */
-public class trabajadores {
+public class Trabajador {
     private Integer numident;
     private String nombre1;
     private String nombre2;
@@ -19,10 +19,10 @@ public class trabajadores {
     private String seguro;
     private Integer añosTrabajo;
 
-    public trabajadores() {
+    public Trabajador() {
     }
 
-    public trabajadores(Integer numident, String nombre1, String nombre2, String apellido1, String apellido2, String vehiculo, String seguro, Integer añosTrabajo) {
+    public Trabajador(Integer numident, String nombre1, String nombre2, String apellido1, String apellido2, String vehiculo, String seguro, Integer añosTrabajo) {
         this.numident = numident;
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;

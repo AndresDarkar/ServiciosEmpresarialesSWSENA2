@@ -3,17 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlador;
-
-import Modelo.DTO.Trabajador;
+package Modelo.DAO;
 
 /**
  *
  * @author fragata
  */
-public interface GestionTrabajadorInterface {
-    public Boolean Registrar (Trabajador t );
-    public Boolean Actualizar (Trabajador t);
+public interface PersonaDAOInterface {
+    public Boolean Registrar (PersonaDAOImpl pd);
+    public Boolean Actualizar (PersonaDAOImpl pd);
     public Boolean Eliminar (Integer identificacion);
-    public Trabajador Buscar (Integer identificacion);
+    public PersonaDAOImpl Buscar (Integer identificacion);
 }

@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import Modelo.Proveedor;
+import Modelo.DTO.Proveedor;
 import java.util.ArrayList;
 
 /**

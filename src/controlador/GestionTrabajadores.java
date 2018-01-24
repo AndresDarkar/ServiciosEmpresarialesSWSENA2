@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import Modelo.trabajadores;
+import Modelo.DTO.Trabajador;
 import java.util.ArrayList;
 
 /**
@@ -13,12 +13,28 @@ import java.util.ArrayList;
  * @author fragata
  */
 public class GestionTrabajadores {
-    private static ArrayList<trabajadores> datos;
+    private static ArrayList<Trabajador> datos;
     
     public GestionTrabajadores(){
         datos=new ArrayList<>();
-        trabajadores t1 = new trabajadores(1,"Andres","Sebastian","Parra","Bocanegra","moto","nueva EPS",1);
-        trabajadores t2 = new trabajadores(2,"Juan","Carlos","Melo","Camargo","Cicla","cafesalud",3);
-        
+        Trabajador t1 = new Trabajador(1,"Andres","Sebastian","Parra","Bocanegra","moto","nueva EPS",1);
+        Trabajador t2 = new Trabajador(2,"Juan","Carlos","Melo","Camargo","Cicla","cafesalud",3);
+        datos.add(t1);
+        datos.add(t2);
     }
+    
+    public ArrayList<Trabajador> mostrarTodosLosUsusarios(){
+        return datos;
+    }
+    
+    public Boolean existe(Integer identificacion){
+        for(int i=0; i <datos.size(); i++){
+            if(datos.get(i).getNumident()==(identificacion)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    
 }

@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import Modelo.Persona;
+import Modelo.DTO.Persona;
 
 /**
  *

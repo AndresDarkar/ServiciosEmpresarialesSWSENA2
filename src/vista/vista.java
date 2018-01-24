@@ -6,7 +6,7 @@
 package vista;
 
 
-import Modelo.Persona;
+import Modelo.DTO.Persona;
 import controlador.GestionPersona;
 
 /**
