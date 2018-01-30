@@ -10,13 +10,13 @@ package Modelo.DTO;
  * @author fragata
  */
 public class RepLegal {
-    private Persona represenate;
+    private Persona representante;
     private int numIdenRep;
     private String nombreR;
     private String apellidoR;
 
-    public RepLegal(Persona represenate, int numIdenRep, String nombreR, String apellidoR) {
-        this.represenate = represenate;
+    public RepLegal(Persona representante, int numIdenRep, String nombreR, String apellidoR) {
+        this.representante = representante;
         this.numIdenRep = numIdenRep;
         this.nombreR = nombreR;
         this.apellidoR = apellidoR;
@@ -34,8 +34,9 @@ public class RepLegal {
         return numIdenRep;
     }
 
-    public Persona getRepresenate() {
-        return represenate;
+    
+    public Persona getRepresentante() {
+        return representante;
     }
 
     public void setApellidoR(String apellidoR) {
@@ -47,7 +48,7 @@ public class RepLegal {
     }
 
     public void setRepresenate(Persona represenate) {
-        this.represenate = represenate;
+        this.representante = represenate;
     }
 
     public void setNumIdenRep(int numIdenRep) {
@@ -60,7 +61,7 @@ public class RepLegal {
     }
 
     public RepLegal(Persona represenate) {
-        this.represenate = represenate;
+        this.representante = represenate;
     }
     
     
