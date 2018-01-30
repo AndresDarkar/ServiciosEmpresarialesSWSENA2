@@ -9,13 +9,6 @@ package Modelo.DTO;
  *
  * @author 123
  */
-public class Facturas {
-    private int numfact;
-    private String Cliente;
-    private int numpaquetes;
-    private Double precioEnvio;
-    private String EnvioDesde;
-    private String EnvioA;
-    
+public class Pagos {
     
 }
