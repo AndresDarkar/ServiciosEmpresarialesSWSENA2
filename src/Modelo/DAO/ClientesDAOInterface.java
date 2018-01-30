@@ -7,11 +7,11 @@ package Modelo.DAO;
 
 /**
  *
- * @author fragata
+ * @author 123
  */
-public interface EnvioDAOInterface {
-    public Boolean Registrar (EnvioDAOImpl Ed);
-    public Boolean Actualizar (EnvioDAOImpl Ed);
+public interface ClientesDAOInterface {
+    public Boolean Registrar (ClientesDAOImpl cd);
+    public Boolean Actualizar (ClientesDAOImpl cd);
     public Boolean Eliminar (Integer identificacion);
-    public EnvioDAOImpl Buscar (Integer identificacion);
+    public ClientesDAOImpl Buscar (Integer identificacion);
 }

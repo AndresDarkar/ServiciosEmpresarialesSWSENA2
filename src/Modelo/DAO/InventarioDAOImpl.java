@@ -7,17 +7,17 @@ package Modelo.DAO;
 
 /**
  *
- * @author fragata
+ * @author 123
  */
-public class EnvioDAOImpl implements EnvioDAOInterface{
+public class InventarioDAOImpl implements InventarioDAOInterface{
 
     @Override
-    public Boolean Registrar(EnvioDAOImpl Ed) {
+    public Boolean Registrar(InventarioDAOImpl id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Boolean Actualizar(EnvioDAOImpl Ed) {
+    public Boolean Actualizar(InventarioDAOImpl id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -27,7 +27,7 @@ public class EnvioDAOImpl implements EnvioDAOInterface{
     }
 
     @Override
-    public EnvioDAOImpl Buscar(Integer identificacion) {
+    public InventarioDAOImpl Buscar(Integer identificacion) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
