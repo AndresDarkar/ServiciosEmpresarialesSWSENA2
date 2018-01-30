@@ -61,7 +61,7 @@ public class Proveedor extends RepLegal{
         this.razonPersonal = razonPersonal;
     }
 
-    public RepLegal getRepresentante() {
+    public RepLegal getRepLegalresentante() {
         return representante;
     }
 
