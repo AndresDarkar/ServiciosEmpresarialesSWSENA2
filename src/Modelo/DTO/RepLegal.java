@@ -47,8 +47,8 @@ public class RepLegal {
         this.nombreR = nombreR;
     }
 
-    public void setRepresenate(Persona represenate) {
-        this.representante = represenate;
+    public void setRepresentante(Persona representante) {
+        this.representante = representante;
     }
 
     public void setNumIdenRep(int numIdenRep) {
@@ -60,8 +60,8 @@ public class RepLegal {
     public RepLegal() {
     }
 
-    public RepLegal(Persona represenate) {
-        this.representante = represenate;
+    public RepLegal(Persona representante) {
+        this.representante = representante;
     }
     
     
