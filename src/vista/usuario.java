@@ -7,21 +7,25 @@ package vista;
 
 
 import Modelo.DTO.Persona;
+import com.sun.awt.AWTUtilities;
 import controlador.GestionPersona;
 
 /**
  *
  * @author fragata
  */
-public class vista extends javax.swing.JFrame {
+public class usuario extends javax.swing.JFrame {
 
     /**
      * Creates new form vista
      */
-    public vista() {
+    int x,y;
+    public usuario() {
+        this.setLocationRelativeTo(null);
         GestionPersona gp;
         gp = new GestionPersona();
         initComponents();
+        AWTUtilities.setWindowOpaque(this,false);
         
         
     }
@@ -50,11 +54,25 @@ public class vista extends javax.swing.JFrame {
         txtApellido2 = new javax.swing.JTextField();
         txtApellido1 = new javax.swing.JTextField();
         txtNombre1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
         jLabelFond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                formMouseDragged(evt);
+            }
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                formMouseMoved(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        botomTipoDoc.setBackground(new java.awt.Color(0, 0, 204));
+        botomTipoDoc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        botomTipoDoc.setForeground(new java.awt.Color(255, 255, 255));
         botomTipoDoc.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione su tipo de documento", "Cedula de ciudadania", "Targeta de identidad", "Cedula de extrangeria", "Registro civil" }));
         getContentPane().add(botomTipoDoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 159, 278, -1));
 
@@ -72,10 +90,14 @@ public class vista extends javax.swing.JFrame {
 
         txtfinal.setColumns(20);
         txtfinal.setRows(5);
+        txtfinal.setText("f.gomez@misena.edu.com");
         jScrollPane6.setViewportView(txtfinal);
 
         getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 413, 156));
 
+        registrar.setBackground(new java.awt.Color(0, 0, 204));
+        registrar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        registrar.setForeground(new java.awt.Color(255, 255, 255));
         registrar.setText("Registrar");
         registrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +151,30 @@ public class vista extends javax.swing.JFrame {
         });
         getContentPane().add(txtNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 201, 164, -1));
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 153));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, -1, -1));
+
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel7MouseDragged(evt);
+            }
+        });
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 440, 100));
+
         jLabelFond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/wallpaper blue.jpg"))); // NOI18N
         getContentPane().add(jLabelFond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 480));
 
@@ -158,6 +204,30 @@ public class vista extends javax.swing.JFrame {
     private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombre1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     System.exit(0);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formMouseDragged
+
+    private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formMouseMoved
+
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
+        x = evt.getX();
+        y = evt.getY();
+// TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MousePressed
+
+    private void jLabel7MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseDragged
+        this.setLocation(this.getLocation().x + evt.getX() - x, this.getLocation().y + evt.getY() - y);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MouseDragged
     
     private void registro(){
         Persona p = new Persona();
@@ -187,32 +257,35 @@ public class vista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new vista().setVisible(true);
+                new usuario().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox botomTipoDoc;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelFond;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JButton registrar;

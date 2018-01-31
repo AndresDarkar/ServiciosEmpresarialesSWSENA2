@@ -17,7 +17,9 @@ public class Sesion extends javax.swing.JFrame {
 
     /**
      * Creates new form vista2
-     */
+    
+    */
+    int x,y;
     public Sesion() {
         initComponents();  
         this.setLocationRelativeTo(null);
@@ -42,6 +44,7 @@ public class Sesion extends javax.swing.JFrame {
         txtUser = new javax.swing.JTextField();
         txtPass = new javax.swing.JPasswordField();
         btnSesion = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabelFond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -101,6 +104,19 @@ public class Sesion extends javax.swing.JFrame {
         });
         getContentPane().add(btnSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
 
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLabel1MouseDragged(evt);
+            }
+        });
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel1MousePressed(evt);
+            }
+        });
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 80));
+
         jLabelFond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/wallpaper blue.jpg"))); // NOI18N
         getContentPane().add(jLabelFond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 290));
 
@@ -122,13 +138,24 @@ public class Sesion extends javax.swing.JFrame {
 
     private void btnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSesionActionPerformed
        if(String.valueOf(txtUser.getText()).compareTo("root")==0 &&String.valueOf(txtPass.getPassword()).compareTo("admin")==0){
-           vista obj=new vista();
+           usuario obj=new usuario();
            obj.setVisible(true);
            dispose();
        } else {
            JOptionPane.showMessageDialog(rootPane, "Usuario o contraseña incorrectos");
        }
     }//GEN-LAST:event_btnSesionActionPerformed
+
+    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
+        x = evt.getX();
+        y = evt.getY();
+// TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MousePressed
+
+    private void jLabel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseDragged
+    this.setLocation(this.getLocation().x + evt.getX() - x, this.getLocation().y + evt.getY() - y);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseDragged
     
     /**
      * @param args the command line arguments
@@ -169,6 +196,7 @@ public class Sesion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSesion;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelFond;
