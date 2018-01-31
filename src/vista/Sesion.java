@@ -5,21 +5,28 @@
  */
 package vista;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ad
  */
-public class vista2 extends javax.swing.JFrame {
+public class Sesion extends javax.swing.JFrame {
 
     /**
      * Creates new form vista2
      */
-    public vista2() {
+    public Sesion() {
         initComponents();  
         this.setLocationRelativeTo(null);
         
     }
-
+    public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("image/Chery-Y380.png"));
+        return retValue;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,19 +37,20 @@ public class vista2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtUser = new javax.swing.JTextField();
         txtPass = new javax.swing.JPasswordField();
+        btnSesion = new javax.swing.JButton();
         jLabelFond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 204));
-        jButton1.setFont(new java.awt.Font("MS PMincho", 1, 14)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 0, 153));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Salir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -50,22 +58,19 @@ public class vista2 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icon2.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Ususario:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Contraseña:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
 
-        txtUser.setBackground(new java.awt.Color(0, 0, 153));
+        txtUser.setBackground(new java.awt.Color(0, 0, 204));
         txtUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtUser.setForeground(new java.awt.Color(255, 255, 255));
         txtUser.addActionListener(new java.awt.event.ActionListener() {
@@ -73,9 +78,9 @@ public class vista2 extends javax.swing.JFrame {
                 txtUserActionPerformed(evt);
             }
         });
-        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 130, -1));
+        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 130, -1));
 
-        txtPass.setBackground(new java.awt.Color(0, 0, 102));
+        txtPass.setBackground(new java.awt.Color(0, 0, 204));
         txtPass.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPass.setForeground(new java.awt.Color(255, 255, 255));
         txtPass.addActionListener(new java.awt.event.ActionListener() {
@@ -83,10 +88,21 @@ public class vista2 extends javax.swing.JFrame {
                 txtPassActionPerformed(evt);
             }
         });
-        getContentPane().add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 130, -1));
+        getContentPane().add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 130, -1));
+
+        btnSesion.setBackground(new java.awt.Color(0, 0, 153));
+        btnSesion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSesion.setForeground(new java.awt.Color(255, 255, 255));
+        btnSesion.setText("Iniciar Sesión");
+        btnSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSesionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
 
         jLabelFond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/wallpaper blue.jpg"))); // NOI18N
-        getContentPane().add(jLabelFond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 399, 540));
+        getContentPane().add(jLabelFond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 290));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -104,6 +120,16 @@ public class vista2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPassActionPerformed
 
+    private void btnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSesionActionPerformed
+       if(String.valueOf(txtUser.getText()).compareTo("root")==0 &&String.valueOf(txtPass.getPassword()).compareTo("admin")==0){
+           vista obj=new vista();
+           obj.setVisible(true);
+           dispose();
+       } else {
+           JOptionPane.showMessageDialog(rootPane, "Usuario o contraseña incorrectos");
+       }
+    }//GEN-LAST:event_btnSesionActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -121,27 +147,28 @@ public class vista2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vista2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vista2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vista2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vista2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Sesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new vista2().setVisible(true);
+                new Sesion().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSesion;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelFond;
