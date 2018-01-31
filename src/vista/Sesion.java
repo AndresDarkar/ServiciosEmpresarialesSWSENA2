@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ad
+ * @author ad hola paphu xddddd
  */
 public class Sesion extends javax.swing.JFrame {
 
