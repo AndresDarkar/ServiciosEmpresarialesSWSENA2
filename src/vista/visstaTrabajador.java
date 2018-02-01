@@ -6,7 +6,6 @@
 package vista;
 import java.awt.Image;
 import java.awt.Toolkit;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,6 +21,12 @@ public class visstaTrabajador extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+
+    /**
+     *
+     * @return
+     */
+    @Override
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("image/Chery-Y380.png"));
         return retValue;
@@ -78,14 +83,14 @@ public class visstaTrabajador extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 215, 57, 26));
 
         jLabel4.setText("Nombre de empresa aseguradora");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 247, 170, 26));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 247, 190, 26));
 
         jLabel7.setText("Años de experiencia en mensajeria");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 279, 170, 26));
-        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 282, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 279, 190, 26));
+        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, -1, -1));
 
         jLabel8.setText("año(s).");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 285, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, -1, -1));
 
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {

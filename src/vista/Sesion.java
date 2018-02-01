@@ -139,7 +139,7 @@ public class Sesion extends javax.swing.JFrame {
 
     private void btnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSesionActionPerformed
        if(String.valueOf(txtUser.getText()).compareTo("root")==0 &&String.valueOf(txtPass.getPassword()).compareTo("admin")==0){
-           usuario obj=new usuario();
+           Inicio obj=new Inicio();
            obj.setVisible(true);
            dispose();
        } else {
