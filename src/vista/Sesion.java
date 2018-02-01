@@ -25,6 +25,7 @@ public class Sesion extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
     }
+    @Override
     public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("image/Chery-Y380.png"));
         return retValue;
